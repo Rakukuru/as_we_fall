@@ -61,8 +61,6 @@ theGame.prototype = {
     	// The physics
     	platforms.setAll('body.allowGravity', false);
     	platforms.setAll('body.immovable', true);
-    	//ledge.body.allowGravity = false;
-    	//ledge.body.immovable = true;
 
 	},
 	update: function() {

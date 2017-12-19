@@ -14,6 +14,9 @@ theGame.prototype = {
 		music = this.game.add.audio("bg_music");
 		music.loopFull();
 
+		//  We're going to be using physics, so enable the Arcade Physics system
+    	this.game.physics.startSystem(Phaser.Physics.ARCADE);
+
 		// --- We add the player to the game --- //
 		player = this.game.add.sprite(this.game.world.width/2, 50, 'val');
 		player.anchor.setTo(0.5,0.5);

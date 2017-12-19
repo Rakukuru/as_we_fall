@@ -1,0 +1,30 @@
+<!doctype html> 
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<!--We culd use the phaser we installed... but.. LET'S TRY AN ONLINE LIBRARY! :D-->
+    	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.6.2/phaser.min.js"></script> 
+		<script src="src/preload.js"></script>
+		<script src="src/gametitle.js"></script>
+		<script src="src/thegame.js"></script>
+		<script src="src/gameover.js"></script>	
+		<script src="src/winscreen.js"></script>	
+
+    		<style type="text/css">
+    			body{ margin:0 }
+    		</style>
+		<script type="text/javascript">
+			(function() {
+				var game = new Phaser.Game(300, 600, Phaser.CANVAS, "game");
+				game.state.add("Preload",preload);
+				game.state.add("GameTitle",gameTitle)
+				game.state.add("TheGame",theGame);
+				game.state.add("GameOver",gameOver);
+				game.state.add("WinScreen",winScreen);
+				game.state.start("Preload");
+			})();    
+		</script>
+    </head>
+    <body>
+    </body>
+</html>
